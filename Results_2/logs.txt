@@ -1,0 +1,65 @@
+C:\Users\aksha\OneDrive\Desktop\PROJECTS\Tittyka\Project12\Ak_Adcn>python New_scripts/preprocess_cicids2017.py
+Done
+CSV files found: 8
+Clean rows: 2827876
+Feature dimensions after PCA: 64
+Base vectors shape: (2545088, 64)
+Query vectors shape: (282788, 64)
+Uniform queries shape: (5000, 64)
+Skewed queries shape: (5000, 64)
+
+C:\Users\aksha\OneDrive\Desktop\PROJECTS\Tittyka\Project12\Ak_Adcn>python New_scripts/Run_all.py              
+
+────────────────────────────────────────────────────────────
+  Loading data  (query_set=skewed)
+────────────────────────────────────────────────────────────
+  Base vectors : (2545088, 64)
+  Queries      : (5000, 64)
+
+────────────────────────────────────────────────────────────
+  Computing brute-force ground truth for Recall@K
+────────────────────────────────────────────────────────────
+  Done in 165.0s
+
+────────────────────────────────────────────────────────────
+  Step 1 / 4  —  Vector baseline
+────────────────────────────────────────────────────────────
+  Finished in 87.0s
+
+────────────────────────────────────────────────────────────
+  Step 2 / 4  —  Dimension baseline
+────────────────────────────────────────────────────────────
+  Finished in 2232.3s
+
+────────────────────────────────────────────────────────────
+  Step 3 / 4  —  Harmony fixed  (no adaptive rebalancing)
+────────────────────────────────────────────────────────────
+  Finished in 992.2s
+
+────────────────────────────────────────────────────────────
+  Step 4 / 4  —  Harmony adaptive  (cost-model rebalancing)
+────────────────────────────────────────────────────────────
+  Finished in 1005.5s
+  No rebalancing triggered (load stayed balanced)
+
+────────────────────────────────────────────────────────────
+  FINAL RESULTS
+────────────────────────────────────────────────────────────
+System                  mean(ms)   p95(ms)   p99(ms)      QPS  imbalance   recall
+─────────────────────────────────────────────────────────────────────────────────
+Vector                     15.61     20.19     21.64     64.1     1.5974   0.7357
+Dimension                 446.46    477.04    499.12      2.2     3.7232   0.6367
+Harmony-fixed             196.55    245.61    254.20      5.1     3.8315   0.0011
+Harmony-adaptive          199.22    250.23    262.26      5.0     3.8315   0.0011
+
+Plots saved:
+  harmony_evaluation.png
+  p99_latency.png
+  throughput.png
+  imbalance.png
+  recall.png
+  imbalance_vs_latency.png
+
+────────────────────────────────────────────────────────────
+  Done
+────────────────────────────────────────────────────────────
