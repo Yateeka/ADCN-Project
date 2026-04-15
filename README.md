@@ -114,7 +114,7 @@ data/raw/cicids2017/
 
 ---
 
-# 🔄 Step 1: Preprocess Dataset
+# Step 1: Preprocess Dataset
 
 ```bash
 python scripts/preprocess_cicids2017.py
