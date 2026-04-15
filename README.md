@@ -65,7 +65,7 @@ project-root/
 
 ---
 
-# ⚙️ Setup Instructions
+# Setup Instructions
 
 ## 1. Clone Repository
 
@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 ---
 
-# 📥 Dataset Setup (CIC-IDS2017)
+# Dataset Setup (CIC-IDS2017)
 
 ## Option 1: Kaggle Download
 
